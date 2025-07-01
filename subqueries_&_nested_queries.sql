@@ -9,7 +9,7 @@ WHERE customer_id = (
     ORDER BY amount_paid DESC
     LIMIT 1
 );
-
+-- OR
 SELECT COUNT(*) FROM Customers
 WHERE customer_id = (
     SELECT customer_id
@@ -20,6 +20,7 @@ WHERE customer_id = (
 );
 
 -- 2. Show each order and the total payment of that customer
+
 SELECT o.order_id,
        o.customer_id,
        (SELECT SUM(p.amount_paid)
@@ -37,6 +38,7 @@ WHERE customer_id IN (
 );
 
 -- 4. Show customers who have never placed an order
+
 SELECT * FROM Customers
 WHERE customer_id NOT IN (
     SELECT customer_id FROM Orders
