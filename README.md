@@ -21,13 +21,6 @@ This section demonstrates the use of **scalar**, **correlated**, and **set-based
 - `EXISTS`: Checks if a subquery returns **any** row.
 - `=`: When comparing to a scalar subquery result.
 
-## 📌 Sample Use Cases
-
-- Fetch customers who have placed orders using `IN`.
-- Identify customers who never ordered using `NOT IN`.
-- Show orders for high-value products using subqueries with `IN`.
-- Use `EXISTS` to filter customers based on whether they have made a payment.
-- Use correlated subqueries to dynamically compute values like total paid per customer.
 
 ## ✅ Outcome
 
